@@ -1,7 +1,7 @@
 import re
 
 def calculate_password_strength(password):
-    # Define password strength criteria
+  
     length_criteria = len(password) >= 8
     lower_case_criteria = re.search("[a-z]", password)
     upper_case_criteria = re.search("[A-Z]", password)
@@ -9,7 +9,7 @@ def calculate_password_strength(password):
     special_char_criteria = re.search("[@#$%^&+=]", password)
     unique_chars_criteria = len(set(password)) >= 5
 
-    # Calculate strength score
+    
     score = 0
     if length_criteria:
         score += 1
@@ -24,7 +24,7 @@ def calculate_password_strength(password):
     if unique_chars_criteria:
         score += 1
 
-    # Provide feedback based on the score
+    # feedback 
     if score == 6:
         strength = "Very Strong"
     elif score >= 4:
